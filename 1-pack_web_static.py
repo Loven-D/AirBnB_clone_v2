@@ -19,7 +19,7 @@ def do_pack():
         # Create the 'versions' folder if it doesn't exist
         local("mkdir -p versions")
 
-        # Generate the archive filename (web_static_<year><month><day><hour><minute><second>.tgz)
+        # Generate the archive filename
         now = datetime.utcnow()
         archive_name = "web_static_{}.tgz".format(
             now.strftime("%Y%m%d%H%M%S"))
