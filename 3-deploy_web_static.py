@@ -5,12 +5,12 @@ from datetime import datetime
 from fabric.api import env, local, put, run, runs_once
 
 
-env.hosts = ["34.73.0.174", "35.196.78.105"]
+env.hosts = ["54.175.223.32", "54.209.60.245"]
 """The list of host server IP addresses."""
 
 
 @runs_once
-def do_pack():
+def do_pack(c):
     """Archives the static files."""
     if not os.path.isdir("versions"):
         os.mkdir("versions")
@@ -33,7 +33,7 @@ def do_pack():
     return output
 
 
-def do_deploy(archive_path):
+def do_deploy(c, archive_path):
     """Deploys the static files to the host servers.
     Args:
         archive_path (str): The path to the archived static files.
