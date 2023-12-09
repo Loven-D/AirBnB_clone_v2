@@ -4,7 +4,9 @@ import os
 from datetime import datetime
 from fabric import task, Connection, Config
 
-env = Config(overrides={'sudo': {'password': 'your_sudo_password'}}).from_envvars()
+env = Config(overrides={'sudo': {'password': 'your_sudo_password'}}).
+from_envvars()
+
 
 @task
 def do_pack(c):
@@ -28,6 +30,7 @@ def do_pack(c):
     except Exception:
         output = None
     return output
+
 
 @task
 def do_deploy(c, archive_path):
