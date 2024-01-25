@@ -8,7 +8,7 @@ app = Flask(__name__)
 '''The Flask app instance.'''
 app.url_map.strict_slashes = False
 
-"app.route('/')
+"app.route('/')"
 def indewx():
     '''The home page.'''
     return 'Hello HBNB!'
