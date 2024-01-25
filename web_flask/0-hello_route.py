@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 "app.route('/')"
-def indewx():
+def index():
     '''The home page.'''
     return 'Hello HBNB!'
 
